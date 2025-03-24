@@ -1,0 +1,171 @@
+/* Custom styles for YouTube Shorts AI Pipeline website */
+
+:root {
+  --primary-color: #ff0000;
+  --secondary-color: #0a0a0a;
+  --accent-color: #4285f4;
+  --light-color: #f8f9fa;
+  --dark-color: #212529;
+}
+
+/* General Styles */
+body {
+  font-family: 'Roboto', sans-serif;
+  color: var(--dark-color);
+  overflow-x: hidden;
+}
+
+/* Hero Section */
+.hero-section {
+  background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+  padding: 6rem 0;
+}
+
+/* Feature Icons */
+.feature-icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 4rem;
+  height: 4rem;
+  font-size: 2rem;
+}
+
+/* Cards */
+.card {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1) !important;
+}
+
+/* Form Styling */
+.form-control:focus, .form-select:focus {
+  border-color: var(--accent-color);
+  box-shadow: 0 0 0 0.25rem rgba(66, 133, 244, 0.25);
+}
+
+/* Custom Button Styling */
+.btn-primary {
+  background-color: var(--accent-color);
+  border-color: var(--accent-color);
+}
+
+.btn-primary:hover, .btn-primary:focus {
+  background-color: #3367d6;
+  border-color: #3367d6;
+}
+
+/* Navbar Customization */
+.navbar-dark {
+  background-color: var(--secondary-color) !important;
+}
+
+.navbar-brand {
+  font-weight: 700;
+  font-size: 1.5rem;
+}
+
+/* Progress Bar */
+.progress {
+  height: 1rem;
+  border-radius: 0.5rem;
+}
+
+/* Table Styling */
+.table {
+  border-radius: 0.5rem;
+  overflow: hidden;
+}
+
+.table th {
+  background-color: var(--light-color);
+}
+
+/* Status Badges */
+.badge-queued {
+  background-color: #6c757d;
+}
+
+.badge-processing {
+  background-color: #ffc107;
+  color: #212529;
+}
+
+.badge-completed {
+  background-color: #28a745;
+}
+
+.badge-failed {
+  background-color: #dc3545;
+}
+
+/* Animations */
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+.fade-in {
+  animation: fadeIn 0.5s ease-in;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+  .hero-section {
+    padding: 3rem 0;
+  }
+  
+  .hero-section h1 {
+    font-size: 2.5rem;
+  }
+  
+  .feature-icon {
+    width: 3rem;
+    height: 3rem;
+    font-size: 1.5rem;
+  }
+}
+
+/* Placeholder images */
+.img-placeholder {
+  background-color: #e9ecef;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 300px;
+  border-radius: 0.5rem;
+}
+
+/* Footer styling */
+footer a {
+  text-decoration: none;
+}
+
+footer a:hover {
+  text-decoration: underline;
+}
+
+/* Modal customization */
+.modal-header {
+  background-color: var(--accent-color);
+  color: white;
+}
+
+/* Scroll behavior */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Section spacing */
+section {
+  padding: 5rem 0;
+}
+
+@media (max-width: 768px) {
+  section {
+    padding: 3rem 0;
+  }
+}

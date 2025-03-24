@@ -1,0 +1,23 @@
+# YouTube Shorts AI Pipeline Requirements
+
+# Core dependencies
+python-dotenv==1.0.0
+requests==2.31.0
+moviepy==1.0.3
+pydub==0.25.1
+pillow==10.0.0
+
+# Text generation
+rytr-python==0.1.0
+
+# Audio generation
+elevenlabs==0.2.24
+
+# Video generation
+runway-python==0.1.0
+
+# Music generation
+suno-python==0.1.0
+
+# Testing
+pytest==7.4.0

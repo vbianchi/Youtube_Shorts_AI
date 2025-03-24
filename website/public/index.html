@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>YouTube Shorts AI Pipeline</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <div class="container">
+            <a class="navbar-brand" href="#">
+                <i class="fab fa-youtube text-danger me-2"></i>
+                YouTube Shorts AI Pipeline
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link active" href="#home">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#create">Create</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#shorts">My Shorts</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#about">About</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <section id="home" class="hero-section py-5">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-lg-6">
+                    <h1 class="display-4 fw-bold mb-4">Create YouTube Shorts with AI</h1>
+                    <p class="lead mb-4">Generate engaging short-form videos for YouTube with just a few clicks. Our AI pipeline handles everything from script writing to video production.</p>
+                    <div class="d-flex gap-3">
+                        <a href="#create" class="btn btn-primary btn-lg">Get Started</a>
+                        <a href="#about" class="btn btn-outline-secondary btn-lg">Learn More</a>
+                    </div>
+                </div>
+                <div class="col-lg-6">
+                    <img src="images/hero-image.svg" alt="YouTube Shorts AI" class="img-fluid rounded shadow-lg">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="features" class="py-5 bg-light">
+        <div class="container">
+            <h2 class="text-center mb-5">How It Works</h2>
+            <div class="row g-4">
+                <div class="col-md-3">
+                    <div class="card h-100 border-0 shadow-sm">
+                        <div class="card-body text-center">
+                            <div class="feature-icon bg-primary bg-gradient text-white rounded-circle mb-3">
+                                <i class="fas fa-pen-fancy"></i>
+                            </div>
+                            <h5 class="card-title">1. Text Generation</h5>
+                            <p class="card-text">Our AI creates engaging scripts tailored to your topic using Rytr.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="card h-100 border-0 shadow-sm">
+                        <div class="card-body text-center">
+                            <div class="feature-icon bg-primary bg-gradient text-white rounded-circle mb-3">
+                                <i class="fas fa-microphone"></i>
+                            </div>
+                            <h5 class="card-title">2. Voice Generation</h5>
+                            <p class="card-text">Convert scripts to natural-sounding voiceovers with ElevenLabs.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="card h-100 border-0 shadow-sm">
+                        <div class="card-body text-center">
+                            <div class="feature-icon bg-primary bg-gradient text-white rounded-circle mb-3">
+                                <i class="fas fa-video"></i>
+                            </div>
+                            <h5 class="card-title">3. Video Creation</h5>
+                            <p class="card-text">Generate visually appealing videos that match your content using Runway.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="card h-100 border-0 shadow-sm">
+                        <div class="card-body text-center">
+                            <div class="feature-icon bg-primary bg-gradient text-white rounded-circle mb-3">
+                                <i class="fas fa-music"></i>
+                            </div>
+                            <h5 class="card-title">4. Music Generation</h5>
+                            <p class="card-text">Add background music that complements your content with Suno.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="create" class="py-5">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-lg-8">
+                    <div class="card border-0 shadow">
+                        <div class="card-header bg-primary text-white">
+                            <h3 class="mb-0">Create a YouTube Short</h3>
+                        </div>
+                        <div class="card-body">
+                            <form id="createShortForm">
+                                <div class="mb-3">
+                                    <label for="topic" class="form-label">Topic or Idea</label>
+                                    <input type="text" class="form-control" id="topic" placeholder="e.g., The future of AI in content creation" required>
+                                </div>
+                                <div class="mb-3">
+                                    <label for="duration" class="form-label">Duration (seconds)</label>
+                                    <input type="range" class="form-range" id="duration" min="15" max="60" step="5" value="30">
+                                    <div class="text-center" id="durationValue">30 seconds</div>
+                                </div>
+                                <div class="mb-3">
+                                    <div class="form-check form-switch">
+                                        <input class="form-check-input" type="checkbox" id="addCaptions" checked>
+                                        <label class="form-check-label" for="addCaptions">Add Captions</label>
+                                    </div>
+                                </div>
+                                <div class="mb-3">
+                                    <label for="voiceSelect" class="form-label">Voice Selection</label>
+                                    <select class="form-select" id="voiceSelect">
+                                        <option value="">Auto-select best voice</option>
+                                        <option value="voice1">Professional Male</option>
+                                        <option value="voice2">Professional Female</option>
+                                        <option value="voice3">Casual Male</option>
+                                        <option value="voice4">Casual Female</option>
+                                    </select>
+                                </div>
+                                <button type="submit" class="btn btn-primary w-100">Generate Short</button>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="shorts" class="py-5 bg-light">
+        <div class="container">
+            <h2 class="text-center mb-4">My Shorts</h2>
+            <div class="table-responsive">
+                <table class="table table-hover bg-white shadow-sm rounded">
+                    <thead>
+                        <tr>
+                            <th>Topic</th>
+                            <th>Created</th>
+                            <th>Status</th>
+                            <th>Progress</th>
+                            <th>Actions</th>
+                        </tr>
+                    </thead>
+                    <tbody id="shortsList">
+                        <!-- Shorts will be loaded here dynamically -->
+                        <tr>
+                            <td colspan="5" class="text-center py-4">No shorts created yet. <a href="#create">Create your first short!</a></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </section>
+
+    <section id="about" class="py-5">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-lg-6">
+                    <h2 class="mb-4">About YouTube Shorts AI Pipeline</h2>
+                    <p class="lead">Our platform combines cutting-edge AI technologies to automate the creation of engaging YouTube Shorts videos.</p>
+                    <p>The YouTube Shorts AI Pipeline is a comprehensive solution that integrates multiple AI tools to create short-form videos for YouTube. The pipeline automates the entire process from content ideation to final video production, making it easy to create engaging content for your channel.</p>
+                    <h5 class="mt-4">Technologies Used:</h5>
+                    <ul class="list-group list-group-flush mb-4">
+                        <li class="list-group-item bg-transparent"><strong>Rytr</strong> - AI text generation</li>
+                        <li class="list-group-item bg-transparent"><strong>ElevenLabs</strong> - Text-to-speech</li>
+                        <li class="list-group-item bg-transparent"><strong>Runway</strong> - AI video generation</li>
+                        <li class="list-group-item bg-transparent"><strong>Suno</strong> - AI music generation</li>
+                    </ul>
+                    <a href="https://github.com/yourusername/youtube-shorts-pipeline" target="_blank" class="btn btn-outline-primary">
+                        <i class="fab fa-github me-2"></i>View on GitHub
+                    </a>
+                </div>
+                <div class="col-lg-6">
+                    <img src="images/about-image.svg" alt="About YouTube Shorts AI" class="img-fluid rounded shadow">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="bg-dark text-white py-4">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6">
+                    <h5>YouTube Shorts AI Pipeline</h5>
+                    <p>Create engaging short-form videos for YouTube with AI.</p>
+                </div>
+                <div class="col-md-3">
+                    <h5>Links</h5>
+                    <ul class="list-unstyled">
+                        <li><a href="#home" class="text-white">Home</a></li>
+                        <li><a href="#create" class="text-white">Create</a></li>
+                        <li><a href="#shorts" class="text-white">My Shorts</a></li>
+                        <li><a href="#about" class="text-white">About</a></li>
+                    </ul>
+                </div>
+                <div class="col-md-3">
+                    <h5>Connect</h5>
+                    <ul class="list-unstyled">
+                        <li><a href="https://github.com/yourusername/youtube-shorts-pipeline" class="text-white"><i class="fab fa-github me-2"></i>GitHub</a></li>
+                    </ul>
+                </div>
+            </div>
+            <hr>
+            <div class="text-center">
+                <p class="mb-0">&copy; 2025 YouTube Shorts AI Pipeline. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Modal for job status -->
+    <div class="modal fade" id="jobStatusModal" tabindex="-1" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">Short Generation Status</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <div class="text-center mb-4">
+                        <div class="spinner-border text-primary" role="status" id="statusSpinner">
+                            <span class="visually-hidden">Loading...</span>
+                        </div>
+                        <div id="statusComplete" class="d-none">
+                            <i class="fas fa-check-circle text-success fa-3x"></i>
+                        </div>
+                    </div>
+                    <h5 class="text-center mb-3" id="statusTitle">Processing your short...</h5>
+                    <div class="progress mb-3">
+                        <div class="progress-bar progress-bar-striped progress-bar-animated" id="statusProgress" role="progressbar" style="width: 0%"></div>
+                    </div>
+                    <div class="text-center text-muted" id="statusMessage">
+                        This may take a few minutes. Please don't close this window.
+                    </div>
+                </div>
+                <div class="modal-footer d-none" id="statusFooter">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                    <a href="#" class="btn btn-primary" id="downloadButton">Download Short</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="js/main.js"></script>
+</body>
+</html>
