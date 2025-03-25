@@ -57,7 +57,7 @@ The entire process is automated, allowing you to create professional-quality sho
 4. For the web interface, install Node.js dependencies:
    ```bash
    cd website
-   npm install
+   sudo apt-get install npm
    ```
 
 ## Usage
