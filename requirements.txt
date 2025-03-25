@@ -14,7 +14,7 @@ pillow==10.0.0
 elevenlabs==0.2.24
 
 # Video generation
-runway-python==0.1.0
+#runway-python==0.1.0
 
 # Music generation
 suno-python==0.1.0
