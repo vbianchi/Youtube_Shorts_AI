@@ -17,7 +17,7 @@ elevenlabs==0.2.24
 #runway-python==0.1.0
 
 # Music generation
-suno-python==0.1.0
+#suno-python==0.1.0
 
 # Testing
 pytest==7.4.0
