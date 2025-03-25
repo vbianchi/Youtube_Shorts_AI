@@ -100,6 +100,105 @@ print(f"Short created: {result['output_path']}")
 
 3. Use the web interface to create and manage your YouTube Shorts
 
+## API Key Configuration
+
+Each AI service requires its own API key for authentication:
+
+### Rytr (Text Generation)
+- Sign up at https://rytr.me/
+- Go to your account settings
+- Find the API section and generate a new API key
+- Add it to your .env file as `RYTR_API_KEY=your_key_here`
+
+### ElevenLabs (Voice Generation)
+- Create an account at https://elevenlabs.io/
+- Navigate to your profile settings
+- Copy your API key
+- Add it to your .env file as `ELEVENLABS_API_KEY=your_key_here`
+
+### Runway (Video Generation)
+- Sign up at https://runwayml.com/
+- Go to your account settings > API
+- Generate a new API key
+- Add it to your .env file as `RUNWAY_API_KEY=your_key_here`
+
+### Suno (Music Generation)
+- Create an account at https://suno.ai/
+- Access your account settings
+- Copy your API key
+- Add it to your .env file as `SUNO_API_KEY=your_key_here`
+
+## Customization Options
+
+### Script Customization
+- Modify the `tone` parameter in `text_generator.py` to change the writing style
+- Adjust the `max_length` parameter to control script length
+- Change the `language` parameter for different languages
+
+### Voice Customization
+- Change the `voice_id` in `audio_generator.py` to use different voices
+- Adjust `stability` and `similarity_boost` for voice characteristics
+- Modify `model_id` to use different TTS models
+
+### Video Customization
+- Change the `style` parameter in `video_generator.py` for different visual styles
+- Adjust `resolution` for different video dimensions
+- Modify `fps` to change frame rate
+- Set `duration` to control video length
+
+### Music Customization
+- Change the `mood` parameter in `music_generator.py`
+- Adjust `tempo` for faster or slower music
+- Modify `genre` for different music styles
+
+## Extending the Pipeline
+
+The modular architecture makes it easy to extend:
+
+### Add New AI Services
+- Create a new client class in the appropriate module
+- Implement the required API methods
+- Update the generator class to use your new client
+
+### Add Post-Processing Features
+- Implement video effects in the `video_generator.py`
+- Add caption generation in the pipeline integration
+- Implement thumbnail generation for YouTube
+
+### Add Analytics
+- Track generation metrics
+- Implement A/B testing for different styles
+- Add performance analytics for video engagement
+
+### Add Multi-Platform Support
+- Extend the pipeline to support TikTok format
+- Add Instagram Reels support
+- Implement Facebook Shorts compatibility
+
+## Permanent Deployment
+
+For a permanent website deployment:
+
+### Frontend Deployment (Vercel)
+- Sign up at https://vercel.com/
+- Connect your GitHub repository
+- Select the website directory as the project root
+- Configure build settings (if needed)
+- Deploy
+
+### Backend Deployment (Heroku)
+- Create an account at https://heroku.com/
+- Install Heroku CLI
+- Run `heroku create your-app-name`
+- Add environment variables for API keys
+- Deploy with `git push heroku main`
+
+### Database Setup (MongoDB Atlas)
+- Sign up at https://www.mongodb.com/cloud/atlas
+- Create a new cluster
+- Set up database user and network access
+- Connect your application using the connection string
+
 ## Documentation
 
 For detailed documentation, see the [docs](./docs) directory:
