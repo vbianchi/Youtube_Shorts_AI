@@ -8,7 +8,7 @@ pydub==0.25.1
 pillow==10.0.0
 
 # Text generation
-rytr-python==0.1.0
+#rytr-python==0.1.0
 
 # Audio generation
 elevenlabs==0.2.24
